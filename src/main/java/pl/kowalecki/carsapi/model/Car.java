@@ -16,18 +16,18 @@ public class Car {
     private String fuelType;
     private Long engineCapacity;
     private Long enginePower;
-    private Year prodYear;
+    private String prodYear;
     private String countryProd;
     private String colour;
     private Long vin;
-    private Float fuelUsage;
+    private Double fuelUsage;
     private String gearBoxType;
     private String gearBoxLevel;
 
     public Car() {
     }
 
-    public Car(String mark, String model, String body, String fuelType, Long engineCapacity, Long enginePower, Year prodYear, String countryProd, String colour, Long vin, Float fuelUsage, String gearBoxType, String gearBoxLevel) {
+    public Car(String mark, String model, String body, String fuelType, Long engineCapacity, Long enginePower, String prodYear, String countryProd, String colour, Long vin, Double fuelUsage, String gearBoxType, String gearBoxLevel) {
         this.mark = mark;
         this.model = model;
         this.body = body;
@@ -99,11 +99,11 @@ public class Car {
         this.enginePower = enginePower;
     }
 
-    public Year getProdYear() {
+    public String getProdYear() {
         return prodYear;
     }
 
-    public void setProdYear(Year prodYear) {
+    public void setProdYear(String prodYear) {
         this.prodYear = prodYear;
     }
 
@@ -131,11 +131,11 @@ public class Car {
         this.vin = vin;
     }
 
-    public Float getFuelUsage() {
+    public Double getFuelUsage() {
         return fuelUsage;
     }
 
-    public void setFuelUsage(Float fuelUsage) {
+    public void setFuelUsage(Double fuelUsage) {
         this.fuelUsage = fuelUsage;
     }
 
