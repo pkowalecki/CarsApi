@@ -35,4 +35,15 @@ public class CarApi {
             return new ResponseEntity<>(HttpStatus.ACCEPTED);}
         return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
+
+    @GetMapping("/getCarById")
+    public ResponseEntity<Car> getCarById(@RequestParam Long id){
+        Car car = (carService.getCarById(id));
+        if(car != null) {
+            return new ResponseEntity<>(car, HttpStatus.FOUND);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+
+    }
 }
