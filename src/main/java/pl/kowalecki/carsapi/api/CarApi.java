@@ -10,9 +10,9 @@ import pl.kowalecki.carsapi.service.CarService;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/car")
 public class CarApi {
 
     private CarService carService;
@@ -22,28 +22,44 @@ public class CarApi {
         this.carService = carApi;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allVechicles")
     public ResponseEntity<List<Car>> getAllCars(){
     List<Car>carList=carService.getAllCars();
         if(!carList.isEmpty()) {return new ResponseEntity<>(carList, HttpStatus.ACCEPTED);}
         return new ResponseEntity<>(null, HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @PostMapping
+    @PostMapping("/addCar")
     public ResponseEntity<HttpStatus> addCar(@RequestBody Car newCar){
         if(carService.addCar(newCar)) {
             return new ResponseEntity<>(HttpStatus.ACCEPTED);}
         return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @GetMapping("/getCarById")
-    public ResponseEntity<Car> getCarById(@RequestParam Long id){
-        Car car = (carService.getCarById(id));
+    @PutMapping("/editCar/{id}")
+    public ResponseEntity<HttpStatus> editCar(@PathVariable Long id, @RequestBody Car newCar){
+        boolean edit = carService.editCar(id, newCar);
+        if(edit){
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/getVechicleDetails/{id}")
+    public ResponseEntity<Car> getVechicleDetails(@PathVariable Long id){
+        Car car = (carService.getVechicleDetails(id));
         if(car != null) {
             return new ResponseEntity<>(car, HttpStatus.FOUND);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
-
+    }
+    @DeleteMapping("/deleteCar/{id}")
+    public ResponseEntity<Car> deleteCar(@PathVariable Long id){
+        if(carService.deleteCar(id)){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }

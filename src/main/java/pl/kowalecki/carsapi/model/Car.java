@@ -19,15 +19,16 @@ public class Car {
     private String prodYear;
     private String countryProd;
     private String colour;
-    private Long vin;
+    private String vin;
     private Double fuelUsage;
     private String gearBoxType;
     private String gearBoxLevel;
+    private String serviceNeeded;
 
     public Car() {
     }
 
-    public Car(String mark, String model, String body, String fuelType, Long engineCapacity, Long enginePower, String prodYear, String countryProd, String colour, Long vin, Double fuelUsage, String gearBoxType, String gearBoxLevel) {
+    public Car(String mark, String model, String body, String fuelType, Long engineCapacity, Long enginePower, String prodYear, String countryProd, String colour, String vin, Double fuelUsage, String gearBoxType, String gearBoxLevel, String serviceNeeded) {
         this.mark = mark;
         this.model = model;
         this.body = body;
@@ -41,6 +42,7 @@ public class Car {
         this.fuelUsage = fuelUsage;
         this.gearBoxType = gearBoxType;
         this.gearBoxLevel = gearBoxLevel;
+        this.serviceNeeded = serviceNeeded;
     }
 
     public Long getId() {
@@ -123,11 +125,11 @@ public class Car {
         this.colour = colour;
     }
 
-    public Long getVin() {
+    public String getVin() {
         return vin;
     }
 
-    public void setVin(Long vin) {
+    public void setVin(String vin) {
         this.vin = vin;
     }
 
@@ -154,6 +156,10 @@ public class Car {
     public void setGearBoxLevel(String gearBoxLevel) {
         this.gearBoxLevel = gearBoxLevel;
     }
+
+    public String getServiceNeeded(){return serviceNeeded;}
+
+    public void setServiceNeeded(String serviceNeeded){this.serviceNeeded = serviceNeeded; }
 
     @Override
     public String toString() {
