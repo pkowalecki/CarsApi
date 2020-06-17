@@ -1,7 +1,6 @@
 package pl.kowalecki.carsapi.model;
 
 import javax.persistence.*;
-import java.time.Year;
 
 @Entity
 public class Car {
