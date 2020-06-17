@@ -10,8 +10,8 @@ import pl.kowalecki.carsapi.service.CarService;
 
 
 import java.util.List;
-import java.util.Optional;
 
+@CrossOrigin
 @RestController
 public class CarApi {
 
