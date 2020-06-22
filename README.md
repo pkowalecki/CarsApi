@@ -7,9 +7,9 @@ getAllVechicles, https://pkowaleckicarsapi.herokuapp.com/allVechicles
 
 addVechicle, https://pkowaleckicarsapi.herokuapp.com/addCar
 {
-	"mark": "TEST",
+    "mark": "TEST",
     "model": "TEST",
-    "body": "TEST",
+    "bodyKit": "TEST",
     "fuelType": "TEST",
     "engineCapacity": 0,
     "enginePower": 0, 
@@ -20,7 +20,7 @@ addVechicle, https://pkowaleckicarsapi.herokuapp.com/addCar
     "fuelUsage": 0.0,
     "gearBoxType": "TEST",
     "gearBoxLevel": "TEST",
-	"serviceNeeded": "TEST"
+    "serviceNeeded": "TEST"
 }
 editVechicle, https://pkowaleckicarsapi.herokuapp.com/editCar/id
 
