@@ -65,7 +65,7 @@ public class CarApi {
     }
 
 
-    @GetMapping("/Model")
+    @GetMapping("/getModel")
     public Car getModel() {
         return new Car("","","","",1L,1L,"","","","",0.0,"","","");
     }
