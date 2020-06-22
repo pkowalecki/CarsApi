@@ -34,8 +34,8 @@ public class CarServiceImpl implements  CarService{
             carToEdit.get().setMark(newCar.getMark());
         if(!newCar.getModel().isEmpty())
             carToEdit.get().setModel(newCar.getModel());
-        if(!newCar.getBody().isEmpty())
-            carToEdit.get().setBody(newCar.getBody());
+        if(!newCar.getBodyKit().isEmpty())
+            carToEdit.get().setBodyKit(newCar.getBodyKit());
         if(!newCar.getFuelType().isEmpty())
             carToEdit.get().setFuelType(newCar.getFuelType());
         if(newCar.getEngineCapacity() != null)
@@ -73,6 +73,8 @@ public class CarServiceImpl implements  CarService{
         carRepository.deleteById(id);
         return true;
     }
+
+
 
 
 }

@@ -22,6 +22,7 @@ public class CarApi {
         this.carService = carApi;
     }
 
+
     @GetMapping("/allVechicles")
     public ResponseEntity<List<Car>> getAllCars(){
     List<Car>carList=carService.getAllCars();
@@ -61,5 +62,11 @@ public class CarApi {
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+
+    @GetMapping("/Model")
+    public Car getModel() {
+        return new Car("","","","",1L,1L,"","","","",0.0,"","","");
     }
 }

@@ -11,7 +11,7 @@ public class Car {
     private Long id;
     private String mark;
     private String model;
-    private String body;//nadwozie
+    private String bodyKit;//nadwozie
     private String fuelType;
     private Long engineCapacity;
     private Long enginePower;
@@ -27,10 +27,10 @@ public class Car {
     public Car() {
     }
 
-    public Car(String mark, String model, String body, String fuelType, Long engineCapacity, Long enginePower, String prodYear, String countryProd, String colour, String vin, Double fuelUsage, String gearBoxType, String gearBoxLevel, String serviceNeeded) {
+    public Car(String mark, String model, String bodyKit, String fuelType, Long engineCapacity, Long enginePower, String prodYear, String countryProd, String colour, String vin, Double fuelUsage, String gearBoxType, String gearBoxLevel, String serviceNeeded) {
         this.mark = mark;
         this.model = model;
-        this.body = body;
+        this.bodyKit = bodyKit;
         this.fuelType = fuelType;
         this.engineCapacity = engineCapacity;
         this.enginePower = enginePower;
@@ -68,12 +68,12 @@ public class Car {
         this.model = model;
     }
 
-    public String getBody() {
-        return body;
+    public String getBodyKit() {
+        return bodyKit;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setBodyKit(String bodyKit) {
+        this.bodyKit = bodyKit;
     }
 
     public String getFuelType() {
@@ -166,7 +166,7 @@ public class Car {
                 "id=" + id +
                 ", mark='" + mark + '\'' +
                 ", model='" + model + '\'' +
-                ", body='" + body + '\'' +
+                ", bodyKit='" + bodyKit + '\'' +
                 ", fuelType='" + fuelType + '\'' +
                 ", engineCapacity=" + engineCapacity +
                 ", enginePower=" + enginePower +
