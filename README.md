@@ -28,3 +28,5 @@ getVechicleDetails, https://pkowaleckicarsapi.herokuapp.com/getVechicleDetails/i
 
 deleteCar, https://pkowaleckicarsapi.herokuapp.com/deleteCar/id
 
+getModel, https://pkowaleckicarsapi.herokuapp.com/getModel
+
